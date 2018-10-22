@@ -36,4 +36,4 @@ console.log(
 );
 
 // Turn on the notification back after x minutes
-setTimeout(on, 10000);
+setTimeout(on, durationInMilliseconds);
