@@ -1,26 +1,39 @@
-#!/usr/bin/env screen -L node
+#!/usr/bin/env screen node
 
+import * as moment from "moment";
 import { off, on } from "./notification";
 
 const argc = process.argv.splice(2);
 
-if (argc.length != 1) {
-  console.log("shit happens");
+if (argc.length < 1) {
+  console.log("invalid argumets");
   process.exit(1);
 }
 
-const inputNumber = argc[0];
+const time = argc[0];
+const unit = argc[1] as moment.DurationInputArg2;
 
-if (!/^\d+$/.test(inputNumber)) {
-  console.error(`Invalid input ${inputNumber}`);
+if (!/^\d+$/.test(time)) {
+  console.error(`Invalid input ${time}`);
   process.exit(1);
 }
 
-const second = 1000; // 1 second = 1000 miliseconds
-const minutes = parseInt(inputNumber) * second; //How long in minutes, user want to turn off notifications
+const parsedTime = parseInt(time);
+
+const duration = moment.duration(parsedTime, unit);
+const durationInMilliseconds = duration.as("millisecond");
 
 // Make sure notification is off first
 off();
 
+console.log(
+  `"DO NOT DISTURB" mode activated
+    You will not receive notification for the next ${time} ${unit}.
+    After that, your notification will be turned on again.
+    ${duration}
+
+    You can also close this terminal if you want`
+);
+
 // Turn on the notification back after x minutes
-setTimeout(on, minutes);
+setTimeout(on, 10000);
