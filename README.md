@@ -1,5 +1,7 @@
 # DeepWork
 
+![demo](./docs/demo-deepwork.gif)
+
 ## Requirement
 
 - NodeJS
