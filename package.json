@@ -1,6 +1,6 @@
 {
   "name": "deepwork",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Turn on mac os do not disturb for a specified amount of time",
   "main": "src/main.ts",
   "dependencies": {
