@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env screen -L node
 
 import { off, on } from "./notification";
 
