@@ -17,6 +17,7 @@
   "bin": {
     "deepwork": "./bin/main.js"
   },
+  "repository": "https://github.com/muhajirframe/deepwork",
   "author": "Muhammad Muhajir <muhajirframe@gmail.com>",
   "license": "MIT"
 }
