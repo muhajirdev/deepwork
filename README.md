@@ -24,6 +24,8 @@ For example :
 deepwork 1 hour
 ```
 
+After that, you can safely close the terminal. The script will still run in the background
+
 ## Supported Time Units
 
 DeepWork using [momentJS](https://momentjs.com/) for duration conversion. So DeepWork we support all duration unit that's supported by momentjs. Which means all of these units works
@@ -46,6 +48,5 @@ DeepWork using [momentJS](https://momentjs.com/) for duration conversion. So Dee
 
 If you have any question, ping me on twitter [@muhajirframe](https://twitter.com/muhajirframe)
 or [summit an issue](https://github.com/muhajirframe/deepwork/issues/new)
-
 
 **Enjoy**
