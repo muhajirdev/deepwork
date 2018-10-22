@@ -1,0 +1,22 @@
+{
+  "name": "deepwork",
+  "version": "1.0.0",
+  "description": "Turn on mac os do not disturb for a specified amount of time",
+  "main": "src/main.ts",
+  "dependencies": {
+    "@sindresorhus/do-not-disturb": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.0",
+    "typescript": "^3.1.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --outDir bin"
+  },
+  "bin": {
+    "deepwork": "./bin/main.js"
+  },
+  "author": "Muhammad Muhajir <muhajirframe@gmail.com>",
+  "license": "MIT"
+}
